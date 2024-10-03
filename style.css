@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.calc-container {
+    display: grid;
+    justify-items: center;
+}
+
+.screen {
+    color: white;
+    background: rgb(109, 138, 123);
+    width: 300px;
+    height: 50px;
+    display: grid;
+    place-items: end end;
+    font-size: 40px;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+.buttons {
+    width: 310px;
+    border-radius: 20px;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: "digits other";
+    background: rgb(41, 70, 55);
+}
+
+.digits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 7px;
+}
+
+.digits .key {
+    color: white;
+    border-width: 1px;
+    background: rgb(96, 123, 156);
+}
+
+.other {
+    display: grid;
+    grid-template-areas: "plus minus";
+}
+
+.other .key {
+    color: black;
+    background: rgb(200, 202, 97);
+    border-width: 1px;
+}
+
+.key {
+    font-size: 25px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.key:hover {
+    filter: brightness(120%);
+}
+
+.key:active {
+    filter: brightness(80%);
+}
